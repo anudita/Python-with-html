@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Stop Machines</title>
+	</head>	
+	<style>	
+		*{
+			margin :0px;
+			padding :0px;
+		}
+		body{
+			font-family: san-serif;
+		}
+		.wrapper{
+			padding : 100px;
+			background-color: #cfd1d3;
+			height: 100%;
+			
+			z-index: 0;
+		}
+		.main{
+			background-color: white;
+			padding: 50px;
+			height: auto;
+			opacity: 1;
+		}
+		.main form{
+			
+		}
+		#done {
+			padding: 10px 20px 10px 20px;
+			margin-left: 350px;
+				
+		}
+		h1{
+			margin-left: 700px;
+			font-weight: bold;
+			font-size: 40px;
+		}
+		#login{
+			margin: 0 500px 0 500px;
+			padding-bottom: 50px;
+		}
+	</style>
+	<body>
+		<div class="wrapper">
+			<div class="main">
+				<h1>STOP MACHINES</h1><br><br>
+				<form action="http://192.168.122.1/cgi-bin/vmstop.py" method="post">
+					<fieldset id="login" style="padding-left: 50px;">
+						<legend style="margin: 50px;">Deactivate Machines</legend>
+						<p>Select the machines which you want to deactivate</p><br>
+						<input type="checkbox" name="nnode" value="nnode">&nbsp&nbspName Node Machine<br><br>
+						<input type="checkbox" name="dnode1" value="dnode1">&nbsp&nbspData Node Machine(1)<br><br>
+						<input type="checkbox" name="dnode2" value="dnode2">&nbsp&nbspData Node Machine(2)<br><br>
+						<input type="checkbox" name="dnode3" value="dnode3">&nbsp&nbspData Node Machine(3)<br><br>
+						<input id="done" type="Submit" value="Submit">
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
+
